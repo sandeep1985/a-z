@@ -8,12 +8,17 @@ import {Router} from '@angular/router';
 })
 export class AppComponent {
   title = 'a-z Contact Us';
-
+  isLoggedIn :any ;
   constructor(private _router : Router ) {
 
   }
   ngOnInit(){
-   // this._router.navigateByUrl('/login');
+    this.isLoggedIn = localStorage.getItem('logged');
+    if(this.isLoggedIn=='true'){
+      this._router.navigateByUrl('/dashboard');
+    }else{
+      this._router.navigateByUrl('/login');
+    }
   }
 }
 
