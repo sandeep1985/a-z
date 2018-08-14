@@ -6,8 +6,40 @@
       </ol>
       <!-- Icon Cards-->
       <div class="row">
-       users 
-       
+          <div class="col-md-12">
+              <div class="table-responsive">
+                  <table *ngIf="!isNoRecord" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>Date of Enquiry</th>
+                        <th>Parent Name</th>
+                        <th>Parent Phone</th>
+                        <th>Parent Email</th>
+                        <th>Parent Address</th>
+                        <th>Child Name</th>
+                        <th>Child Birthdate</th>
+                        <th>Start Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let u of usersData ">
+                        <td>{{u.date1}}</td>
+                        <td>{{u.parent_name}}</td>
+                        <td>{{u.parent_phone}}</td>
+                        <td>{{u.parent_email}}</td>
+                        <td>{{u.parent_address}}, {{u.parent_city}}</td>
+                        <td>{{u.child_name}}</td>
+                        <td>{{u.child_birthdate}}</td>
+                        <td>{{u.start_date}}</td>
+                      </tr>
+                    
+                     
+                    </tbody>
+                  </table>
+                </div>
+           
+          </div>
+          
       </div>
   
     </div>

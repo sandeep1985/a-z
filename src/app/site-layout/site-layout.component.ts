@@ -9,7 +9,7 @@ export class SiteLayoutComponent implements OnInit {
 
   fullName : string;
   constructor() { 
-    this.fullName = "aaaaa";
+    this.fullName  = localStorage.getItem('fullname');
   }
 
   ngOnInit() {
@@ -20,6 +20,6 @@ export class SiteLayoutComponent implements OnInit {
     localStorage.removeItem('logged');
     localStorage.removeItem('user_id');
     localStorage.removeItem('fullname');
-    window.location.href = window.location.origin + '/login';
+    window.location.href = 'login';
   }
 }

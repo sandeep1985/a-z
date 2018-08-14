@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('user_id',data.user_login_info[0].id);
         localStorage.setItem('fullname',data.user_login_info[0].fullname);
         localStorage.setItem('logged','true');
-        window.location.href = window.location.origin + '/dashboard';
+        window.location.href = 'dashboard';
         //this._router.navigateByUrl('/dashboard');
       }else{
         jQuery(".login_fail").show();
